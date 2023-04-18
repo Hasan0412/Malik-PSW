@@ -15,3 +15,5 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+
+window.alert("Your password must contain between 8 characters and 128 characters. ");
