@@ -31,5 +31,10 @@ const includeUppercase = confirm("WOULD YOU LIKE THE PASSWORD TO INCLUDE UPPERCA
 const includeNumber = confirm("WOULD YOU LIKE THE PASSWORD TO INCLUDE NUMBERS?");
 const includeSpecialCharacters = confirm("WOULD YOU LIKE THE PASSWORD TO INCLUDE SPECIAL CHARACTERS?");
 
+if (!includeLowercase && !includeUppercase && !includeNumber && !includeSpecialCharacters) {
+  alert("ERROR! AT LEASE ONE CHARACTER TYPE MUST BE SELECTED.");
+  return;
+}
+
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
