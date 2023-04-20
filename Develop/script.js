@@ -19,7 +19,7 @@ function generatePassword() {
   if (passwordLength > 128 | !Number.isInteger(passwordLength)) {
     alert("PASSWORD IS TOO LONG, IT MUST CONTAIN A MAXIMUM OF 128 CHARACTERS. ");
     return; }
-  }
+  
 
 const lowercase = "abcdefghijklmnopqrstuvwxyz";
 const uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -32,14 +32,16 @@ var includeNumber = confirm("WOULD YOU LIKE THE PASSWORD TO INCLUDE NUMBERS?");
 var includeSpecialCharacters = confirm("WOULD YOU LIKE THE PASSWORD TO INCLUDE SPECIAL CHARACTERS?");
 
 if (!includeLowercase && !includeUppercase && !includeNumber && !includeSpecialCharacters) {
-  alert("ERROR! AT LEASE ONE CHARACTER TYPE MUST BE SELECTED.");
+  alert("ERROR! AT LEAST ONE CHARACTER TYPE MUST BE SELECTED.");
   return;
 }
 
+var userChoices = "";
 userChoices += includeLowercase ? lowercase : "";
 userChoices += includeUppercase ? uppercase : "";
 userChoices += includeNumber ? number : "";
 userChoices += includeSpecialCharacters ? specialCharacters : "";
 
+}
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
