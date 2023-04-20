@@ -20,7 +20,6 @@ function generatePassword() {
     alert("PASSWORD IS TOO LONG, IT MUST CONTAIN A MAXIMUM OF 128 CHARACTERS. ");
     return; }
   
-
 const lowercase = "abcdefghijklmnopqrstuvwxyz";
 const uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 const number = "0123456789";
@@ -41,6 +40,14 @@ userChoices += includeLowercase ? lowercase : "";
 userChoices += includeUppercase ? uppercase : "";
 userChoices += includeNumber ? number : "";
 userChoices += includeSpecialCharacters ? specialCharacters : "";
+
+var randomPassword = "";
+for(var i=0; i < passwordLength; i++) {
+  var randomIndex = Math.floor(Math.random() * userChoices.length);
+  randomPassword += userChoices[randomIndex];
+}
+
+return randomPassword;
 
 }
 // Add event listener to generate button
