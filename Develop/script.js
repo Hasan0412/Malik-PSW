@@ -36,8 +36,10 @@ if (!includeLowercase && !includeUppercase && !includeNumber && !includeSpecialC
   return;
 }
 
-var message = "";
-
+userChoices += includeLowercase ? lowercase : "";
+userChoices += includeUppercase ? uppercase : "";
+userChoices += includeNumber ? number : "";
+userChoices += includeSpecialCharacters ? specialCharacters : "";
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
