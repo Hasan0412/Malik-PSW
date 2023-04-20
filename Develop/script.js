@@ -11,7 +11,7 @@ function writePassword() {
 
 window.alert("WELCOME TO MALIK PASSWORD GENERATOR!  ");
 
-function generatePassword() {
+function createPassword() {
   var passwordLength = parseInt(prompt("YOUR PASSWORD MUST CONTAIN BETWEEN 8 CHARACTERS AND 128 CHARACTERS! ")); 
   if (passwordLength < 8 | !Number.isInteger(passwordLength)) {
     alert("PASSWORD IS TOO SHORT, IT MUST CONTAIN AT LEAST 8 CHARACTERS. ");
@@ -25,29 +25,29 @@ const uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 const number = "0123456789";
 const specialCharacters = "!@£$%^&*()_+{}:|?><~€#-=[];'\/.,`";
 
-var includeLowercase = confirm("WOULD YOU LIKE THE PASSWORD TO INCLUDE LOWERCASE LETTERS?");
-var includeUppercase = confirm("WOULD YOU LIKE THE PASSWORD TO INCLUDE UPPERCASE LETTERS?");
-var includeNumber = confirm("WOULD YOU LIKE THE PASSWORD TO INCLUDE NUMBERS?");
-var includeSpecialCharacters = confirm("WOULD YOU LIKE THE PASSWORD TO INCLUDE SPECIAL CHARACTERS?");
+var addLowercase = confirm("WOULD YOU LIKE THE PASSWORD TO INCLUDE LOWERCASE LETTERS?");
+var addUppercase = confirm("WOULD YOU LIKE THE PASSWORD TO INCLUDE UPPERCASE LETTERS?");
+var addNumber = confirm("WOULD YOU LIKE THE PASSWORD TO INCLUDE NUMBERS?");
+var addSpecialCharacters = confirm("WOULD YOU LIKE THE PASSWORD TO INCLUDE SPECIAL CHARACTERS?");
 
-if (!includeLowercase && !includeUppercase && !includeNumber && !includeSpecialCharacters) {
+if (!addLowercase && !addUppercase && !addNumber && !addSpecialCharacters) {
   alert("ERROR! AT LEAST ONE CHARACTER TYPE MUST BE SELECTED.");
   return;
 }
 
 var userChoices = "";
-userChoices += includeLowercase ? lowercase : "";
-userChoices += includeUppercase ? uppercase : "";
-userChoices += includeNumber ? number : "";
-userChoices += includeSpecialCharacters ? specialCharacters : "";
+userChoices += addLowercase ? lowercase : "";
+userChoices += addUppercase ? uppercase : "";
+userChoices += addNumber ? number : "";
+userChoices += addSpecialCharacters ? specialCharacters : "";
 
-var randomPassword = "";
+var passwordGenerator = "";
 for(var i=0; i < passwordLength; i++) {
   var randomIndex = Math.floor(Math.random() * userChoices.length);
-  randomPassword += userChoices[randomIndex];
+  passwordGenerator += userChoices[randomIndex];
 }
 
-return randomPassword;
+return passwordGenerator;
 
 }
 // Add event listener to generate button
