@@ -14,7 +14,11 @@ function generatePassword() {
   if (passwordLength < 8 | !Number.isInteger(passwordLength)) {
     alert(" PASSWORD IS TOO SHORT, IT MUST CONTAIN AT LEAST 8 CHARACTERS. ");
     return; }
+  if (passwordLength > 128 | !Number.isInteger(passwordLength)) {
+    alert(" PASSWORD IS TOO LONG, IT MUST CONTAIN A MAXIMUM OF 128 CHARACTERS. ");
+    return; }
   }
+
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
