@@ -11,3 +11,6 @@ This task includes the following changes to the Password generator:
 - In case of user error, a series of prompts are in place to avoid errors in generating a password.
 - Once my criteria is decided, my randomly generated password will appear on the screen.
 
+See the screenshot and link below.
+
+## Screenshot
