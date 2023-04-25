@@ -14,3 +14,13 @@ This task includes the following changes to the Password generator:
 See the screenshot and link below.
 
 ## Screenshot
+
+![Screenshot](/Develop/Images/Screenshot%202023-04-25%20at%2016.34.09.png)
+
+## Link
+
+https://hasan0412.github.io/Malik-Password-Suppliers/
+
+## Reference
+
+https://github.com/coding-boot-camp/friendly-parakeet/
