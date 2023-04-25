@@ -8,7 +8,7 @@ function writePassword() {
   passwordText.value = password;
 }
 
-window.alert("WELCOME TO MALIK PASSWORD GENERATOR!  ");
+window.alert("WELCOME TO MALIK PASSWORD SUPPLIER!  ");
 
 function createPassword() {
   var passwordLength = parseInt(prompt("YOUR PASSWORD MUST CONTAIN BETWEEN 8 CHARACTERS AND 128 CHARACTERS! ")); 
