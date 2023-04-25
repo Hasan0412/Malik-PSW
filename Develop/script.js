@@ -20,15 +20,15 @@ function createPassword() {
     alert("PASSWORD IS TOO LONG, IT MUST CONTAIN A MAXIMUM OF 128 CHARACTERS. ");
     return; }
   
-const lowercase = "abcdefghijklmnopqrstuvwxyz";
-const uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 const number = "0123456789";
 const specialCharacters = "!@£$%^&*()_+{}:|?><~€#-=[];'\/.,`";
+const lowercase = "abcdefghijklmnopqrstuvwxyz";
+const uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
-var addLowercase = confirm("WOULD YOU LIKE THE PASSWORD TO INCLUDE LOWERCASE LETTERS?");
-var addUppercase = confirm("WOULD YOU LIKE THE PASSWORD TO INCLUDE UPPERCASE LETTERS?");
 var addNumber = confirm("WOULD YOU LIKE THE PASSWORD TO INCLUDE NUMBERS?");
 var addSpecialCharacters = confirm("WOULD YOU LIKE THE PASSWORD TO INCLUDE SPECIAL CHARACTERS?");
+var addLowercase = confirm("WOULD YOU LIKE THE PASSWORD TO INCLUDE LOWERCASE LETTERS?");
+var addUppercase = confirm("WOULD YOU LIKE THE PASSWORD TO INCLUDE UPPERCASE LETTERS?");
 
 if (!addLowercase && !addUppercase && !addNumber && !addSpecialCharacters) {
   alert("ERROR! AT LEAST ONE CHARACTER TYPE MUST BE SELECTED.");
@@ -36,10 +36,10 @@ if (!addLowercase && !addUppercase && !addNumber && !addSpecialCharacters) {
 }
 
 var userChoices = "";
-userChoices += addLowercase ? lowercase : "";
-userChoices += addUppercase ? uppercase : "";
 userChoices += addNumber ? number : "";
 userChoices += addSpecialCharacters ? specialCharacters : "";
+userChoices += addLowercase ? lowercase : "";
+userChoices += addUppercase ? uppercase : "";
 
 var passwordGenerator = "";
 for(var i=0; i < passwordLength; i++) {
