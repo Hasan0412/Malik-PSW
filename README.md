@@ -19,7 +19,7 @@ See the screenshot and link below.
 
 ## Link
 
-https://hasan0412.github.io/Malik-Password-Suppliers/
+https://hasan0412.github.io/Maliks-Password-Supplier/
 
 ## Reference
 
